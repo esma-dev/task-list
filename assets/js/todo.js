@@ -24,3 +24,15 @@ $("input[type='text']").on("keypress", (event) => {
 		currInput.val("");
 	}
 });
+
+//toggle the plus button on and off
+
+// let addButton = document.querySelector(".fa-plus");
+// addButton.addEventListener("click", () => {
+// 	let input = document.querySelector("input");
+// 	input.classList.toggle("disappear");
+// })
+
+$(".fa-plus").on("click", () => {
+	$("input[type='text']").fadeToggle();
+});

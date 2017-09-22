@@ -82,3 +82,7 @@ input:focus {
 	color: grey;
 	text-decoration: line-through;
 }
+
+.disappear {
+	opacity: 0.0;
+}
