@@ -20,7 +20,7 @@ $("ul").on("click", ".delete", (event) => {
 $("input[type='text']").on("keypress", (event) => {
 	let currInput = $(event.currentTarget);
 	if(event.which === 13){
-		$("ul").append(`<li><span class="delete">X </span>${currInput.val()}</li>`);
+		$("ul").append(`<li><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span>${currInput.val()}</li>`);
 		currInput.val("");
 	}
 });
