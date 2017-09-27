@@ -30,8 +30,14 @@ $("input[type='text']").on("keypress", (event) => {
 // let addButton = document.querySelector(".fa-plus");
 // addButton.addEventListener("click", () => {
 // 	let input = document.querySelector("input");
-// 	input.classList.toggle("disappear");
-// })
+// 	if (input.classList[0] === "disappear"){
+// 		input.classList.add("appear");
+// 		input.classList.remove("disappear");
+// 	} else {
+// 		input.classList.add("disappear");
+// 		input.classList.remove("appear");
+// 	}
+// });
 
 $(".fa-plus").on("click", () => {
 	$("input[type='text']").fadeToggle();
