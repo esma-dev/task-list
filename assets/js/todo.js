@@ -19,6 +19,7 @@ $("ul").on("click", ".delete", (event) => {
 //add listener to text input that fires when hit the enter key
 $("input[type='text']").on("keypress", (event) => {
 	let currInput = $(event.currentTarget);
+	// console.log(currInput);
 	if(event.which === 13){
 		$("ul").append(`<li><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span>${currInput.val()}</li>`);
 		currInput.val("");
@@ -27,18 +28,11 @@ $("input[type='text']").on("keypress", (event) => {
 
 //toggle the plus button on and off
 
-// let addButton = document.querySelector(".fa-plus");
-// addButton.addEventListener("click", () => {
-// 	let input = document.querySelector("input");
-// 	if (input.classList[0] === "disappear"){
-// 		input.classList.add("appear");
-// 		input.classList.remove("disappear");
-// 	} else {
-// 		input.classList.add("disappear");
-// 		input.classList.remove("appear");
-// 	}
-// });
-
-$(".fa-plus").on("click", () => {
-	$("input[type='text']").fadeToggle();
+$("#addTask").on("click", (event) => {
+	// $("input[type='text']").fadeToggle();
+	let textContent = $("input[type='text']")[0].value;
+	if (textContent){
+		$("ul").append(`<li><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span>${textContent}</li>`);
+		$("input[type='text']")[0].value = "";
+	}
 });
